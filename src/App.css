@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800&family=Space+Grotesk:wght@700&display=swap');
+
+:root {
+  --game-ui: 'Plus Jakarta Sans', sans-serif; /* For card labels and instructions */
+  --scoreboard: 'Space Grotesk', sans-serif; /* Tech-geometric look for numbers */
+
+  --bg-main: #0B0F19;
+  --bg-card: #1E2640;
+
+  --primary: #F8FAFC;
+  --current-score: #38BDF8;
+  --best-score: #FFDE00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--game-ui);
+  color: var(--primary);
+}
+
+body {
+  background-color: var(--bg-main);
+
+  padding: 1.5rem 2rem 0 2rem;
+}
+

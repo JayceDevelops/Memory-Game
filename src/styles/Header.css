@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scores{
+    display: flex;
+    flex-direction: row;
+
+    gap: 5rem;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--scoreboard);
+
+    gap: 1rem;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.current > h3{
+    color: var(--current-score);
+}
+
+.best > h3 {
+    color: var(--best-score);
+}
