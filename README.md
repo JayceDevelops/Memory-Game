@@ -1,4 +1,4 @@
-# PokéMemory: A React Side-Effect Mastery Game
+# Memory Game: A React Side-Effect Mastery Game
 
 An interactive, responsive memory card game built to master asynchronous data streams, React state synchronization, and the `useEffect` hook lifecycle. Players are presented with a dynamic grid of 12 randomly selected Pokémon and must click each card exactly once. The challenge? The board completely shuffles after every click.
 
