@@ -4,7 +4,11 @@ export default function Card({id, image, title, description, usedID, setUsedID, 
 
     const cardClicked = () => {
         if (usedID.includes(id)){
-            setBest(current);
+
+            if (current > best){
+                setBest(current);
+            }
+    
             setCurrent(0);
             setUsedID([]);
             setCards([]);
