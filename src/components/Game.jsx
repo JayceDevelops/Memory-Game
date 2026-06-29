@@ -7,14 +7,17 @@ export default function Game({current, setCurrent, best, setBest}) {
     const [cards, setCards] = useState([]);
     const [usedID, setUsedID] = useState([]);
 
-    getPokimonData(setCards, setUsedID);
+    getPokimonData(setCards, setUsedID, best, current);
+
+    console.log(cards);
+    console.log(usedID);
 
     return (
         <main>
             <div className='cardholder'>
                 {cards.map((pokemon) => {
                     return (
-                        <Card title={pokemon.name} image={pokemon.image} description={pokemon.description}/>
+                        <Card key={crypto.randomUUID()} id={pokemon.id} title={pokemon.name} image={pokemon.image} description={pokemon.description} usedID={usedID} setUsedID={setUsedID} current={current} setCurrent={setCurrent} best={best} setBest={setBest} setCards={setCards}/>
                     );
                 })}
             </div>
@@ -22,17 +25,19 @@ export default function Game({current, setCurrent, best, setBest}) {
     );
 };
 
-const getPokimonData = (setCards, setUsedID) => {
+const getPokimonData = (setCards, setUsedID, best, current) => {
     useEffect(() => {
         let ignore = false;
 
         const fetchCards = async () => {
 
             try {
-                for (let i = 0; i < 11; i++){
+                let tempCards = [];
+
+                for (let i = 0; i < 18; i++){
 
                     if (ignore === false){
-                        const number = Math.floor(Math.random() * 100) + 1;
+                        const number = Math.floor(Math.random() * 100);
                     
                         const pokemonPromise = fetch(`https://pokeapi.co/api/v2/pokemon/${number}`);
                         const speciesPromise = fetch(`https://pokeapi.co/api/v2/pokemon-species/${number}`);
@@ -53,10 +58,11 @@ const getPokimonData = (setCards, setUsedID) => {
                             description: englishDescription?.flavor_text || "No description available."
                         };
 
-                        setCards((prevCards) => [...prevCards, card]);
-                        setUsedID((prevUsedID) => [...prevUsedID, pokemonData.id]);
+                        tempCards.push(card);
                     }
                 }
+
+                setCards(tempCards);
             }
             catch {
                 console.log("Error: Fetching Data");
@@ -69,5 +75,5 @@ const getPokimonData = (setCards, setUsedID) => {
             ignore = true;
         };
 
-    }, []);
+    }, [current, best]);
 };
