@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header current={current} best={best}/>
-      <Game />
+      <Game current={current} setCurrent={setCurrent} best={best} setBest={setBest}/>
     </>
   )
 }
