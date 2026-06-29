@@ -34,7 +34,7 @@ const getPokimonData = (setCards, setUsedID, best, current) => {
             try {
                 let tempCards = [];
 
-                for (let i = 0; i < 18; i++){
+                for (let i = 1; i < 19; i++){
 
                     if (ignore === false){
                         const number = Math.floor(Math.random() * 100);
