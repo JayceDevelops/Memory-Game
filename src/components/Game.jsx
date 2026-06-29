@@ -37,7 +37,7 @@ const getPokimonData = (setCards, setUsedID, best, current) => {
                 for (let i = 0; i < 18; i++){
 
                     if (ignore === false){
-                        const number = Math.floor(Math.random() * 100) + 1;
+                        const number = Math.floor(Math.random() * 151) + 1;
                     
                         const pokemonPromise = fetch(`https://pokeapi.co/api/v2/pokemon/${number}`);
                         const speciesPromise = fetch(`https://pokeapi.co/api/v2/pokemon-species/${number}`);
