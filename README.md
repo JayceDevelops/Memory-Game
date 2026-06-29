@@ -8,7 +8,6 @@ An interactive, responsive memory card game built to master asynchronous data st
 
 *   **Dynamic Data Fetching:** Sources live images, names, and filtered language descriptions on the fly from the RESTful [PokeAPI](https://pokeapi.co/).
 *   **Tactile Core UI:** Fully responsive card layout with micro-interactions, utilizing modern CSS pseudo-classes (`:hover` and `:active`) to deliver a spring-loaded mechanical feel.
-*   **Zero-Duplicate Algorithm:** Uses a native JavaScript `Set` architecture to guarantee 12 completely unique cards are rolled at the start of each session.
 *   **Predictable Game Loop:** Tracks current scores, tracks high scores across resets, and logs clicked assets using state immutability patterns.
 
 ## Start Screen
