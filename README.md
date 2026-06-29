@@ -1,16 +1,23 @@
-# React + Vite
+# PokéMemory: A React Side-Effect Mastery Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, responsive memory card game built to master asynchronous data streams, React state synchronization, and the `useEffect` hook lifecycle. Players are presented with a dynamic grid of 12 randomly selected Pokémon and must click each card exactly once. The challenge? The board completely shuffles after every click.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Key Features
 
-## React Compiler
+*   **Dynamic Data Fetching:** Sources live images, names, and filtered language descriptions on the fly from the RESTful [PokeAPI](https://pokeapi.co/).
+*   **Tactile Core UI:** Fully responsive card layout with micro-interactions, utilizing modern CSS pseudo-classes (`:hover` and `:active`) to deliver a spring-loaded mechanical feel.
+*   **Zero-Duplicate Algorithm:** Uses a native JavaScript `Set` architecture to guarantee 12 completely unique cards are rolled at the start of each session.
+*   **Predictable Game Loop:** Tracks current scores, tracks high scores across resets, and logs clicked assets using state immutability patterns.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Start Screen
+<img width="1277" height="738" alt="image" src="https://github.com/user-attachments/assets/53609696-6317-44c3-81b6-d06fecbd06c9" />
 
-## Expanding the ESLint configuration
+## After Getting A Few Points
+<img width="1279" height="732" alt="image" src="https://github.com/user-attachments/assets/02ae6293-7cc4-40b4-b8a5-ef448a66f0f8" />
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## After Losing
+<img width="1278" height="739" alt="image" src="https://github.com/user-attachments/assets/2cbccff2-4102-4276-8d48-88a7ebcdd825" />
+
+
